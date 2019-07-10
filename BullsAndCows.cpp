@@ -7,25 +7,20 @@
 using namespace std;
 
 void PrintIntro();
+void PlayGame();
 void GetGuessAndPrintBack();
 
 int main()
 {
 
 	PrintIntro();
-
-	// Loo for the number of turns asking for guesses
-	constexpr int NUMBER_OF_TURNS = 5;
-	
-	for (int count = 1; count <= NUMBER_OF_TURNS; count++)
-	{
-		GetGuessAndPrintBack();
-		cout << endl;
-	}
-
+	PlayGame();
 
 	return 0;
 }
+
+
+
 
 void PrintIntro()
 {
@@ -34,6 +29,18 @@ void PrintIntro()
 	cout << "Can you guess the " << WORD_LENGTH;
 	cout << " letter isogam I'm thinking of? \n";
 
+}
+
+void PlayGame() 
+{
+	// Loo for the number of turns asking for guesses
+	constexpr int NUMBER_OF_TURNS = 5;
+
+	for (int count = 1; count <= NUMBER_OF_TURNS; count++)
+	{
+		GetGuessAndPrintBack();
+		cout << endl;
+	}
 }
 
 void GetGuessAndPrintBack()
